@@ -48,9 +48,9 @@ Do the following:
 
 
 
-
+/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 /*
-Task 1d - Multiply
+Task 1 - Multiply
  
 Do the following:   
    1. Invoke the multiply function below and pass it two numbers
@@ -74,9 +74,14 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+  return 7 * age 
+
+ 
+   
+  
 }
+console.log(dogYears(26))
 
 
 
@@ -85,7 +90,7 @@ function dogYears(/*add your code here*/){
 //Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
 /*
 Use the hungryDog function and feeding requirements below to do the following:
-  1. Invoke the hungryDog function below and pass it a weight value in pounds
+  1e Invok the hungryDog function below and pass it a weight value in pounds
   2. Also, pass to hungryDog an age value in years (note: if the dog is a puppy, the age will be a decimal. For example: three months = 3/12 or .25)
   3. Do the proper calculations and return the number of pounds of raw food to feed the dog/puppy in a day
   
@@ -107,9 +112,35 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if ( age >= 1){
+      if (weight <= 5){
+        return .05 * weight;
+      }
+      else if (weight >= 6 && weight <= 10){
+        return .04 * weight;
+      }
+      else if (weight >= 11 && weight <=15){
+        return .03 * weight;
+      }
+      else {
+        return .02 * weight;
+      }
+      
+    }
+    if (age < 1 ) {
+      if (age > 2/12 && age < 4/12){
+        return 0.10 * weight;
+      }
+      else if (age > 4/12 && age < 7/12){
+        return .05 * weight;
+      }
+      else if (age > 7/12 && age < 12/12){
+        return .04 * weight;
+      }
+    }
   }
+  console.log(hungryDog(15))
 
 
 
@@ -133,10 +164,64 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+//  let paper = 0.25
+//  let rock = 0.50
+//  let scissors = 0.75
 
-function game(user, computer){
-    /*add your code here*/
+let computer = Math.floor(Math.random() * 3)
+let choice = ""
+if (computer === 0){
+  choice = "rock"
+}else if (computer === 1){
+  choice= "paper"
+}  else if (computer === 2){
+  choice = "scissors"
+
 }
+
+function game(user, choice){
+  
+  
+  if (user === choice){
+    return "its a tie!"
+  }else if (user === "rock" && choice === "paper"){
+    return "you lose!"
+  }else if (user === "rock" && choice === "scissirs"){
+    return "you win!"
+  }
+  if (user === "rock"){
+
+  }
+
+
+ game("rock", choice)
+       
+  // if (user === 0.25) {
+//     return "it's a tie";
+//   }
+//   }else if (user > 0.25 && user <= 0.50){
+//     return "you lose!";
+// }else if (user > 0.50 &&  computer <= 0.25 ){
+//   return "you win!"
+// }else if (computer > 0.25 && computer <= 0.50){
+//   if (user <= 0.25){
+//     return "you win!";
+//   else if (user > 0.25 && user <= 0.50){
+//     return "it's a tie";
+//   else if (user > 0.50){
+//     return "you lose!";
+//   }
+//   }else if (computer > 0.50){
+//   }else if (user <= 0.25){
+//     return "you lose!";
+//   }else if (user > 0.25 && user <= 0.50){
+//     return "you win!";
+//   }else if (user > 0.50){
+//     return "it's a tie"
+//   }
+//   }
+// }
+// }
   
   
 
@@ -151,11 +236,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(Mile){
+  km = mile * 1
+  return miles
   }
-
-
+ console.log(0.621371)
+ 
 
 //Task 5b - Feet to CM
 /*
@@ -165,8 +251,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    feet = cm / 5
   }
  
 
@@ -181,9 +267,15 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(num){
+let annoyingSong = "bottles of soda on the wall";
+let i = 0
+while (annoyingSong) {
+  // return num bottles of soda on the wall, num, bottles of soda, take one down pass it AudioBufferSourceNode, i,  bottles of soda on the wall"
+  // i--; 
+}
+        
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -241,5 +333,5 @@ export default{
     miles,
     feet,
     annoyingSong,
-    grade
+    grade 
 }
