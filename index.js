@@ -17,7 +17,9 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 18;
+if (votingAge > 18)
+console.log(true);
 
 
 /*
@@ -30,8 +32,13 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let variable1 = 'name';
+let variable2 = 'last name';
+if (variable1 === 'name'){
+  console.log('Merfi Disla');
+}else if(variable2 === 'last name'){
+console.log('Disla Merfi');
+}
 
 
 
@@ -58,8 +65,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply( a, b){
+    return a * b;
   }
 
 
@@ -74,8 +81,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
 
 
@@ -107,11 +114,29 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(pounds, age){
+  if( age >= 1){
+    if(pounds <= 5){
+      return .05 * pounds;
+    }else if(pounds >= 6 && pounds <= 10){
+    return .04 * pounds;
+    }else if(pounds >= 11 && pounds <= 15){
+    return .03 * pounds;
+  }else{
+    return .02 * pounds;
   }
-
-
+}
+if(age < 1){
+  if(age > 2/12 && age < 4/12){
+    return .10 * pounds;
+  }else if(age > 4/12 && age < 7/12){
+    return .05 * pounds;
+  }else if(age > 7/12 && age < 12/12){
+    return .04 * pounds;
+  }
+}
+}
+console.log(hungryDog(15));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -134,11 +159,33 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let computer = (Math.random)
+let user = (Math.random)
 function game(user, computer){
-    /*add your code here*/
+  if(computer < 0.34){
+    return 'rock';
+  }else if(computer <= 0.67){
+    return 'paper';
+  }else if(computer > 0.67){
+    return 'scissors';
+  }
+  if(user < 0.34){
+    return 'rock';
+  }else if(user <= 0.67){
+    return 'paper';
+  }else if(user > 0.67){
+    return 'scissors';
+  }
+  if(user === computer){
+    return 'its a tie!';
+  }else if((user === 'rock' && computer === 'paper')||(user === 'scissors' && computer ===  'rock')||(user === 'paper' && computer === 'scissors')){
+    return 'you lose!';
+  }else if((user === 'rock' && computer === 'scissors')||(user === 'scissors' && computer === 'paper')||(user === 'paper' && computer ==='rock')){
+    return 'you win!';
+  }
 }
-  
-  
+console.log(game(user, computer));
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -201,9 +248,19 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score >= 90){
+    return 'you got an A';
+  }else if(score <= 89){
+    return 'you got a B';
+  }else if(score <= 79){
+    return 'you got a C';
+  }else if(score <= 69 ){
+    return 'you got a D';
+  }else {
+    return 'you got a F';
   }
+}
   
   
 
@@ -212,15 +269,10 @@ function grade(/*Your Code here */){
 //Vowel Counter - How many vowels are there?
 /*
 Using the vowelCounter function below do the following:
-  1. Receive a string as a parameter
-  2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
-
-  HINT - you may need to study tomorrow's content on arrays 
-  HINT - try looking up the .includes() method
-*/
+  1. Receive a string as a parameterw
 
 
-function vowelCounter(/*add your code here*/) {
+function vowelCounter/*add your code here*/ {
     /*add your code here*/
 }
 
